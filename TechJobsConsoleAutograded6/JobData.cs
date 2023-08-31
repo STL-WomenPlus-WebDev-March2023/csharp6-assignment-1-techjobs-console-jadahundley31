@@ -47,7 +47,20 @@ namespace TechJobsConsoleAutograded6
             // load data, if not already loaded
             LoadData();
 
-            return null;
+            List<Dictionary<string, string>> jobs = new List<Dictionary<string, string>>();
+
+            foreach (Dictionary<string, string> row in AllJobs)
+            {
+                foreach (KeyValuePair<string, string> searchTerm in row)
+                {
+                    if (!jobs.Contains(row))
+                    {
+                        jobs.Add(row);
+                    }
+                }
+            }
+
+            return jobs;
         }
 
         /**
