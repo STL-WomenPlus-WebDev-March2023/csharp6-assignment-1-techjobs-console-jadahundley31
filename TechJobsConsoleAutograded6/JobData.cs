@@ -53,7 +53,7 @@ namespace TechJobsConsoleAutograded6
             {
                 foreach (KeyValuePair<string, string> searchTerm in row)
                 {
-                    
+
                 }
             }
 
@@ -76,7 +76,10 @@ namespace TechJobsConsoleAutograded6
 
             foreach (Dictionary<string, string> row in AllJobs)
             {
-                if (column == "all")
+                string aValue = row[column];
+
+                //TODO: Make search case-insensitive
+                if (aValue.Contains(value.ToLower()))
                 {
                     foreach (KeyValuePair<string, string> searchTerm in row)
                     {
