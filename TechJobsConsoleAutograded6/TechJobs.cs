@@ -140,21 +140,19 @@ namespace TechJobsConsoleAutograded6
             int count = someJobs.Count;
             if (count == 0)
             {
-                Console.WriteLine(Environment.NewLine + "No results");
+                Console.WriteLine("No results");
             }
             else
             {
                 foreach (Dictionary<string, string> item in someJobs)
                 {
+                    Console.WriteLine();
                     Console.WriteLine("*****");
                     foreach (KeyValuePair<string, string> jobchoice in item)
                     {
-                        if (jobchoice.Key != "String")
-                        {
-                            Console.WriteLine(jobchoice.Key + ": " + jobchoice.Value);
-                        }
+                        Console.WriteLine(jobchoice.Key + ": " + jobchoice.Value);
                     }
-                    Console.WriteLine("*****" + Environment.NewLine);
+                    Console.WriteLine("*****");
                 }
             }
         }
